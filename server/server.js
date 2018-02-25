@@ -1,9 +1,11 @@
-// Generic server.js file. Replace lines of code as needed. Below is simply
-// a generic template from a previous project.
 
 // Express code.
 const express = require('express');
 const app = express();
+
+//router
+const galleryRouter = require('./routes/router');
+app.use('/pictures', galleryRouter);
 
 //bodyParser
 const bodyParser = require('body-parser');

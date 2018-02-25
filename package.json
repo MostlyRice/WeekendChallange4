@@ -4,7 +4,8 @@
   "description": "Gives a basic folder structure for jQuery node server usage. You will need to change sources links and files as needed for your projects, but this should give you a good starting point on a folder structure.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/Feora1343/jquery_node_server_structure#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "pg": "^7.4.1"
   }
 }

@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallary of My Life</title>
-    <link rel="stylesheet" href="vendors/bootstrap.css">
-    <link rel="stylesheet" href="styles/style.css">
     <script src="vendors/angular.min.js"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="vendors/bootstrap.css">
     <title></title>
   </head>
-  <body ng-app="myGallery">
+  <body ng-controller="galleryController as vm">
+        <div class="jumbotron">
+        <h1>Gallery</h1>
+        <p>There's a story behind every picture. </p>
+   </div>
+       <main>
 
-      <div class="container">
-          <section ng-controller="galleryController as vm">
-
-              <div class="col-md-3 " ng-repeat="image in vm.imagesArray">
-                  <img class="col-12" ng-click="vm.clickclick(image)" ng-src="{{image.url}}">
-                  <p class="col-12" ng-show="image.clicked">{{image.synopsis}}</p>
+     <div container="col-md-12">
+          <div class="col-md-4" ng-repeat="picture in vm.imagesArray">
+           <div class="image">
+               <img ng-src="{{picture.pic}}" >
+               <h3 class="pictureTitle">{{picture.name}}</h3>
+           </div>
               </div>
+            </div><!--End Container-->
 
-
-
-          </section><!-- END galleryController -->
-      </div><!-- END .container -->
-  </body>
-</html>
+        </main> <!--End Main-->
+    </body><!--En Body>
+    </html>

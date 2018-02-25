@@ -1,9 +1,25 @@
 
 const app = angular.module('weekend4App', []);
 
-const galleryController = app.controller('galleryController', galleryControl['$http',
-function galleryControl($http){
+const galleryController = app.controller('galleryController', ['$http', function($http){
 
   let self = this;
   self.imagesArray = [];
-}]);//end controller
+
+  self.getPictures = function () {
+         $http({
+             method: 'GET',
+             url: '/pictures',
+         })
+             .then(function (response) {
+                 console.log('Getting Pictures', response.data);
+                 self.imagesArray = response.data;
+             })
+             .catch(function (error) {
+                 console.log('Error getting Pictures', error);
+             })
+     }
+
+ self.getPictures();
+
+ }])
