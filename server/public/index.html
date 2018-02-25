@@ -9,7 +9,6 @@
     <script src="scripts/client.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="vendors/bootstrap.css">
-    <title></title>
   </head>
   <body ng-controller="galleryController as vm">
         <div class="jumbotron">
@@ -18,10 +17,11 @@
    </div>
        <main>
 
-     <div container="col-md-12">
-          <div class="col-md-4" ng-repeat="picture in vm.imagesArray">
+         <div class = "row">
+               <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="picture in vm.imagesArray">
            <div class="image">
-               <img ng-src="{{picture.pic}}" >
+               <img ng-src="{{picture.pic}}"
+               ng-click="vm.imageDescription(picture.description)">
                <h3 class="pictureTitle">{{picture.name}}</h3>
            </div>
               </div>
