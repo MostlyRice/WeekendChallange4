@@ -10,23 +10,22 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="vendors/bootstrap.css">
   </head>
-  <body ng-controller="galleryController as vm">
+  <body>
         <div class="jumbotron">
         <h1>Gallery</h1>
         <p>There's a story behind every picture. </p>
    </div>
-       <main>
-
-         <div class = "row">
-               <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="picture in vm.imagesArray">
-           <div class="image">
-               <img ng-src="{{picture.pic}}"
+       <main ng-controller="galleryController as vm">
+         <section class="container">
+           <div class="row" >
+               <div class="col-md-4" ng-repeat="picture in vm.imagesArray">
+               <img class="fluid rounded img-thumbnail card-img-top"
+               ng-src="{{picture.pic}}"
                ng-click="vm.imageDescription(picture.description)">
                <h3 class="pictureTitle">{{picture.name}}</h3>
-           </div>
               </div>
-            </div><!--End Container-->
-
+               </div>
+            </section><!--End section-->
         </main> <!--End Main-->
-    </body><!--En Body>
+    </body><!--End Body>
     </html>

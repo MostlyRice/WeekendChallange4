@@ -17,13 +17,18 @@ img {
 }
 
 h1 {
-    margin: 20px;
+    margin: 40px;
 }
 
 main {
     border: 20px;
 }
+
 body {
     margin: 20px;
-    background-color: silver;
+}
+
+.pictureTitle {
+  font-family: 'Courier New';
+  font-weight: bold;
 }
