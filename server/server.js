@@ -17,7 +17,7 @@ app.use(express.static('server/public'));
 
 // Can use any number from 1000 - 99999
 // but don't choose 5432 which is the default for the database.
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Start our server.
 app.listen(port, function() {

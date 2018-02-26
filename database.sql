@@ -3,7 +3,8 @@ CREATE TABLE pictures (
 	id SERIAL PRIMARY KEY,
 	name varchar(255),
 	description text,
-	pic varchar(255)
+	pic varchar(255),
+	likes int default 0
 );
 
 -- Add some data
