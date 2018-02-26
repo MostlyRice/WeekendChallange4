@@ -28,8 +28,10 @@ style="background-image: url('http://i.stack.imgur.com/jGlzr.png');">
           <h3 class="pictureTitle">{{picture.name}}</h3>
           <div class="likeButton">
             <button type="button" class="btn btn-primary btn-lg"
-            ng-click="vm.addLike(picture)">
-            {{picture.likes}} likes | {{picture.views}} Views</button>
+            ng-click="vm.addLike(picture)">Like!</button>
+            <div>
+              {{picture.likes}} likes | {{picture.views}} Views
+            </div>
             </div>
           </div>
         </div>
