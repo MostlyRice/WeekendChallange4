@@ -26,8 +26,10 @@ style="background-image: url('http://i.stack.imgur.com/jGlzr.png');">
           ng-click="vm.imageDescription(picture.description)">
           <h3 class="pictureTitle">{{picture.name}}</h3>
           <div class="likeButton">
-            <button type="button" class="btn btn- btn-lg">
-              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>thumbs-up</button>
+            <button type="button" class="btn btn-primary btn-lg"
+            ng-click="vm.addLike(picture)">
+            {{picture.likes}} likes</button>
+
             </div>
           </div>
 

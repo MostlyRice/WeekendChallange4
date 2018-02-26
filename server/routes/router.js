@@ -19,5 +19,20 @@ router.get('/', function(request, response){
   })
 });
 // End GET
+router.put('/:id', function(request,response){
+    console.log('Attempting to add Likes');
 
+    const id = request.params.id
+    const sqlText = 'UPDATE pictures SET likes = likes + 1 WHERE id=$1;';
+    pool.query(sqlText, [id])
+    .then(function(result){
+        console.log('Likes added',result);
+        response.sendStatus(201);
+    })
+    .catch(function(error){
+        console.log('No one likes you',error);
+        response.sendStatus(500);
+    })
+})
+//End PUT
 module.exports = router;

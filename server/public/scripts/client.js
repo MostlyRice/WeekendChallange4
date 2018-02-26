@@ -24,19 +24,21 @@ const galleryController = app.controller('galleryController', ['$http', function
     alert(`Here's the story: ${description}!`);
   }
 
-const likeController = app.controller('likeController', ['$http', function(http){
-    console.log('Like Controller loaded!');
-    const self = this;
+  self.addLike = function(picture){
+      console.log('in addLike');
 
-    // This sets the rating counter to 0 upon loading webpage.
-    self.likeCount = 0;
-
-    // This increases the counter by 1 each time it is clicked.
-    self.increaseLikes = function() {
-        self.likeCount += 1;
-        return self.likeCount;
-      }
-  }]);
+      $http({
+          method:'PUT',
+          url:`/pictures/${picture.id}`,
+      })
+      .then(function(response){
+          console.log('like added', response);
+          self.getPictures();
+      })
+      .catch(function(error){
+          console.log('Error adding like', error);
+      })
+  }
   self.getPictures();
 
 }])
