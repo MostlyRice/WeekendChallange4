@@ -4,7 +4,8 @@ CREATE TABLE pictures (
 	name varchar(255),
 	description text,
 	pic varchar(255),
-	likes int default 0
+	likes int default 0,
+	views int default 0
 );
 
 -- Add some data

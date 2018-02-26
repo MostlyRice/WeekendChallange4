@@ -19,7 +19,7 @@ router.get('/', function(request, response){
   })
 });
 // End GET
-router.put('/:id', function(request,response){
+router.put('/likes/:id', function(request,response){
     console.log('Attempting to add Likes');
 
     const id = request.params.id
@@ -35,4 +35,23 @@ router.put('/:id', function(request,response){
     })
 })
 //End PUT
+
+router.put('/views/:id', function(request,response){
+    console.log('Attempting to add Views');
+
+    const id = request.params.id
+    console.log('ID error',id);
+    const sqlText = 'UPDATE pictures SET views = views + 1 WHERE id=$1;';
+    pool.query(sqlText, [id])
+    .then(function(result){
+        console.log('Views added',result);
+        response.sendStatus(201);
+    })
+    .catch(function(error){
+        console.log('No one viewed you',error);
+        response.sendStatus(500);
+    })
+})
+//End PUT
+
 module.exports = router;

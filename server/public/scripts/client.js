@@ -29,7 +29,7 @@ const galleryController = app.controller('galleryController', ['$http', function
 
       $http({
           method:'PUT',
-          url:`/pictures/${picture.id}`,
+          url:`/pictures/likes/${picture.id}`,
       })
       .then(function(response){
           console.log('like added', response);
@@ -37,6 +37,21 @@ const galleryController = app.controller('galleryController', ['$http', function
       })
       .catch(function(error){
           console.log('Error adding like', error);
+      })
+  }
+  self.addViews = function(picture){
+      console.log('in addViews');
+
+      $http({
+          method:'PUT',
+          url:`/pictures/views/${picture.id}`,
+      })
+      .then(function(response){
+          console.log('views added', response);
+          self.getPictures();
+      })
+      .catch(function(error){
+          console.log('Error adding views',error);
       })
   }
   self.getPictures();
