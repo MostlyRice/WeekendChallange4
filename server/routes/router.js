@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 // Start GET
 router.get('/', function(request, response){
-  const sqlText = `SELECT * FROM pictures ORDER by id`;
+  const sqlText = `SELECT * FROM pictures ORDER BY id`;
   pool.query(sqlText)
   // query was successful
   .then(function(result) {

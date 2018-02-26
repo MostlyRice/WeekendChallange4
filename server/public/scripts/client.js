@@ -24,6 +24,19 @@ const galleryController = app.controller('galleryController', ['$http', function
     alert(`Here's the story: ${description}!`);
   }
 
+const likeController = app.controller('likeController', ['$http', function(http){
+    console.log('Like Controller loaded!');
+    const self = this;
+
+    // This sets the rating counter to 0 upon loading webpage.
+    self.likeCount = 0;
+
+    // This increases the counter by 1 each time it is clicked.
+    self.increaseLikes = function() {
+        self.likeCount += 1;
+        return self.likeCount;
+      }
+  }]);
   self.getPictures();
 
 }])

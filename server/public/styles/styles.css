@@ -25,10 +25,14 @@ main {
 }
 
 body {
-    margin: 20px;
+  background-color:
 }
 
 .pictureTitle {
   font-family: 'Courier New';
   font-weight: bold;
+}
+
+.jumbo {
+  background-color: #FFFFFF
 }

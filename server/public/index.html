@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="weekend4App">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gallary of My Life</title>
-    <script src="vendors/angular.min.js"></script>
-    <script src="scripts/client.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="vendors/bootstrap.css">
-  </head>
-  <body>
-        <div class="jumbotron">
-        <h1>Gallery</h1>
-        <p>There's a story behind every picture. </p>
-   </div>
-       <main ng-controller="galleryController as vm">
-         <section class="container">
-           <div class="row" >
-               <div class="col-md-4" ng-repeat="picture in vm.imagesArray">
-               <img class="fluid rounded img-thumbnail card-img-top"
-               ng-src="{{picture.pic}}"
-               ng-click="vm.imageDescription(picture.description)">
-               <h3 class="pictureTitle">{{picture.name}}</h3>
-              </div>
-               </div>
-            </section><!--End section-->
-        </main> <!--End Main-->
-    </body><!--End Body>
-    </html>
+<html lang="en" ng-app="weekend4App"
+class="container"
+style="background-image: url('http://i.stack.imgur.com/jGlzr.png');">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gallary of My Life</title>
+  <script src="vendors/angular.min.js"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="vendors/bootstrap.css">
+</head>
+<body style="background-color: #C0B28B;">
+  <div class="jumbotron">
+    <h1>Gallery</h1>
+    <p>There's a story behind every picture. </p>
+  </div>
+  <main ng-controller="galleryController as vm">
+    <section class="container">
+      <div class="row" >
+        <div class="col-md-4" ng-repeat="picture in vm.imagesArray">
+          <img class="fluid rounded img-thumbnail card-img-top"
+          ng-src="{{picture.pic}}"
+          ng-click="vm.imageDescription(picture.description)">
+          <h3 class="pictureTitle">{{picture.name}}</h3>
+          <div class="likeButton">
+            <button type="button" class="btn btn- btn-lg">
+              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>thumbs-up</button>
+            </div>
+          </div>
+
+        </div>
+      </section><!--End section-->
+    </main> <!--End Main-->
+  </body><!--End Body-->
+  </html>
