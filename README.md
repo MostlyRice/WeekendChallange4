@@ -5,7 +5,7 @@ Breaking everything down into "less is more".
 We will be using a PEAN solution stack, except without a database.
 
 We will then throw the app on heroku.
-[You can view the app on heroku here.](https://desolate-ocean-90839.herokuapp.com/)
+[You can view the app on heroku here.](https://gentle-plains-19466.herokuapp.com/)
 
 To run this on your computer you will need to...
 
