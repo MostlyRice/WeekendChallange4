@@ -11,7 +11,9 @@ CREATE TABLE pictures (
 -- Add some data
 INSERT INTO pictures (name, description, pic)
 VALUES
-('Dota 2 ', 'Dota 2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation. The game is the stand-alone sequel to Defense of the Ancients (DotA), which was a community-created mod for Warcraft III: Reign of Chaos and its expansion pack, The Frozen Throne.
+('Dota 2 ', 'Dota 2 is a free-to-play multiplayer online battle arena (MOBA) video game developed and published by Valve Corporation. The game is the stand-alone sequel to Defense of the Ancients (DotA), which was a community-created mod for Warcraft III: Reign of Chaos and its expansion pack, The Frozen Throne. 
+
+Dota 2 is played in matches between two teams of five players, with each team occupying and defending their own separate base on the map. Each of the ten players independently controls a powerful character, known as a "hero", who all have unique abilities and differing styles of play. During a match, players collect experience points and items for their heroes to successfully battle the opposing team`s heroes, who attempt to do the same to them. A team wins by being the first to destroy a large structure located in the opposing team`s base, called the "Ancient".
 
 Anyone who knows me, knows Im obsessed with playing Dota 2. I signed up for the 2017 Reddit gift exchange and my secret Santa got me this vinyl figure of my favorite hero Slark! This gift was awesome —hook, line and sinker!', '/assets/dota.jpg'),
 
